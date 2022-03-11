@@ -18,6 +18,10 @@
     },
     "slug": {
       "type": "string"
+    },
+    "posts": {
+      "via": "tag",
+      "collection": "post"
     }
   }
 }
