@@ -59,13 +59,9 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "products": {
-      "via": "Author",
-      "collection": "product"
-    },
-    "recipes": {
-      "via": "author",
-      "collection": "recipe"
+    "posts": {
+      "via": "users_permissions_user",
+      "collection": "post"
     }
   }
 }
