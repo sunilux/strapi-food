@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "name": "Vendors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "contact": {
+      "type": "email"
+    },
+    "products": {
+      "via": "vendor",
+      "collection": "product"
+    },
+    "recipe": {
+      "via": "vendor",
+      "model": "recipe"
+    }
+  }
+}
